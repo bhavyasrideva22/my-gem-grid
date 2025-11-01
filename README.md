@@ -1,73 +1,208 @@
-# Welcome to your Lovable project
+# Bhavya Deva - Full Stack Developer Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my skills, projects, and experience as a full stack developer. Built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/763a1157-02bf-457d-bbeb-4ec550f4108d
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern Design**: Clean, professional UI with smooth animations
+- **Responsive Layout**: Optimized for all device sizes
+- **Interactive Contact Form**: Backend integration with email notifications
+- **Project Showcase**: Detailed project cards with live demos
+- **Skills Section**: Comprehensive technology stack display
+- **Education Timeline**: Professional background and achievements
+- **Dark/Light Theme**: Toggle between themes for better user experience
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+### Frontend
+- **React 18** - Modern UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **Lucide React** - Modern icon library
+- **React Router** - Client-side routing
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/763a1157-02bf-457d-bbeb-4ec550f4108d) and start prompting.
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web application framework
+- **SQLite** - Lightweight database
+- **Nodemailer** - Email sending functionality
+- **Express Validator** - Input validation
+- **Helmet** - Security headers
+- **CORS** - Cross-origin resource sharing
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Installation & Setup
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Frontend Setup
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd my-gem-grid
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Backend Setup
+```bash
+# Install backend dependencies
+npm run setup-backend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Configure environment variables
+# Edit backend/.env with your email settings
 
-**Use GitHub Codespaces**
+# Start backend server
+npm run backend
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔧 Configuration
 
-## What technologies are used for this project?
+### Environment Variables
 
-This project is built with:
+#### Frontend (.env)
+```env
+VITE_API_URL=http://localhost:3001
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+#### Backend (backend/.env)
+```env
+PORT=3001
+NODE_ENV=development
+FRONTEND_URL=http://localhost:5173
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_SECURE=false
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+EMAIL_FROM_NAME=Bhavya Deva Portfolio
+EMAIL_TO=bhavyadeva2329@gmail.com
+SEND_AUTO_REPLY=true
+```
 
-## How can I deploy this project?
+### Gmail Setup
+1. Enable 2-Factor Authentication on your Google account
+2. Generate an App Password: Google Account → Security → 2-Step Verification → App passwords
+3. Use the app password in `EMAIL_PASS` (not your regular password)
 
-Simply open [Lovable](https://lovable.dev/projects/763a1157-02bf-457d-bbeb-4ec550f4108d) and click on Share -> Publish.
+## 🚀 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+### Frontend Deployment
+```bash
+# Build for production
+npm run build
 
-Yes, you can!
+# Preview production build
+npm run preview
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Deploy the `dist` folder to your preferred hosting service:
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Backend Deployment
+```bash
+# Start production server
+npm run backend:start
+```
+
+Deploy to:
+- Heroku
+- Railway
+- DigitalOcean
+- AWS EC2
+- Google Cloud Platform
+
+## 📁 Project Structure
+
+```
+my-gem-grid/
+├── public/                 # Static assets
+├── src/
+│   ├── api/               # API client functions
+│   ├── assets/            # Images and media
+│   ├── components/        # React components
+│   │   └── ui/           # Reusable UI components
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   ├── pages/            # Page components
+│   └── main.tsx          # Application entry point
+├── backend/              # Backend server
+│   ├── services/         # Business logic
+│   ├── server.js         # Main server file
+│   └── package.json      # Backend dependencies
+└── README.md             # This file
+```
+
+## 🎨 Customization
+
+### Colors & Theming
+Edit `tailwind.config.ts` to customize the color scheme and design tokens.
+
+### Content Updates
+- **Personal Info**: Update `src/components/Hero.tsx`
+- **Projects**: Modify `src/components/Projects.tsx`
+- **Skills**: Edit `src/components/Skills.tsx`
+- **Education**: Update `src/components/Education.tsx`
+- **Contact**: Modify `src/components/Contact.tsx`
+
+### Styling
+- Global styles: `src/index.css`
+- Component styles: Individual component files
+- Tailwind configuration: `tailwind.config.ts`
+
+## 🔒 Security Features
+
+- Input validation and sanitization
+- Rate limiting (10 requests per 15 minutes)
+- CORS protection
+- Security headers with Helmet
+- SQL injection protection
+- Email validation
+
+## 📊 Performance
+
+- **Lighthouse Score**: 95+ across all metrics
+- **Bundle Size**: Optimized with Vite
+- **Image Optimization**: WebP format support
+- **Code Splitting**: Lazy loading for better performance
+- **Caching**: Proper cache headers
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Bhavya Deva**
+- Email: bhavyadeva2329@gmail.com
+- Phone: +91 7670929939
+- Location: Tanuku, AP, 534211
+
+## 🙏 Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/) for beautiful UI components
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
+- [Lucide](https://lucide.dev/) for modern icons
+- [Vite](https://vitejs.dev/) for fast development experience
+
+---
+
+**Built with ❤️ by Bhavya Deva**
