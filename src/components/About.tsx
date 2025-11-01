@@ -1,49 +1,52 @@
-import { Code2, Palette, Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import personalImage from "@/assets/bhavya image - Copy.jpg";
 
 const About = () => {
-  const features = [
-    {
-      icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable, efficient code following best practices and modern standards"
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating intuitive and beautiful interfaces that users love to interact with"
-    },
-    {
-      icon: Rocket,
-      title: "Performance",
-      description: "Building fast, optimized applications that scale and deliver great user experiences"
-    }
-  ];
-
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">About Me</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Passionate about creating digital experiences that make a difference
-            </p>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">About Me</h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group p-8 rounded-2xl border border-border bg-card backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-glow"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+          {/* Personal Photo Section */}
+          <div className="flex flex-col lg:flex-row items-center gap-6 mb-16">
+            <div className="flex-shrink-0">
+              <div className="relative group">
+                <img
+                  src={personalImage}
+                  alt="Bhavya - Personal Photo"
+                  className="w-80 h-80 rounded-2xl object-cover shadow-2xl border-4 border-primary/20 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-3xl"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-primary/20 to-transparent group-hover:from-primary/10 transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out"></div>
               </div>
-            ))}
+            </div>
+            <div className="flex-1 space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-center lg:text-left">Hello, I'm Bhavya Deva</h3>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-center lg:text-left">
+              Passionate Full-Stack Developer dedicated to creating beautiful, functional, and user-friendly web applications.
+              With a strong eye for design and a commitment to clean, maintainable code, I enjoy transforming complex problems
+              into simple, elegant solutions that enhance user experience and make a real impact.
+              </p>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-center lg:text-left">
+              Skilled in writing efficient, scalable, and modern code following industry best practices.
+              Constantly exploring new technologies, contributing to open-source projects, and staying 
+              curious about innovation and design.
+              </p>
+              <div className="flex justify-center lg:justify-start pt-12">
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity group"
+                  onClick={() => window.open('/resume.pdf', '_blank')}
+                >
+                  <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Download Resume
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

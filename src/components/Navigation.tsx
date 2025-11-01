@@ -27,30 +27,48 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary hover:opacity-80 transition-opacity"
+            onClick={() => scrollToSection("home")}
+            className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary hover:opacity-80 transition-opacity"
           >
             Portfolio
           </button>
           
           <div className="hidden md:flex items-center gap-8">
             <button
+              onClick={() => scrollToSection("home")}
+              className="text-base md:text-lg text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Home
+            </button>
+            <button
               onClick={() => scrollToSection("about")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-base md:text-lg text-muted-foreground hover:text-foreground transition-colors"
             >
               About
             </button>
             <button
+              onClick={() => scrollToSection("education")}
+              className="text-base md:text-lg text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Education
+            </button>
+            <button
+              onClick={() => scrollToSection("skills")}
+              className="text-base md:text-lg text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Skills
+            </button>
+            <button
               onClick={() => scrollToSection("projects")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-base md:text-lg text-muted-foreground hover:text-foreground transition-colors"
             >
               Projects
             </button>
             <button
-              onClick={() => scrollToSection("skills")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => scrollToSection("experience")}
+              className="text-base md:text-lg text-muted-foreground hover:text-foreground transition-colors"
             >
-              Skills
+              Experience
             </button>
             <Button
               size="sm"
