@@ -40,7 +40,7 @@ const About = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity group"
-                  onClick={() => window.open('/resume.pdf', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/file/d/1EL4a8QF4ezSO8eN-65yD9W6zHF5ax6xu/view?usp=sharing', '_blank')}
                 >
                   <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                   Download Resume
