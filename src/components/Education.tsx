@@ -10,7 +10,7 @@ const Education = () => {
       institution: "Sasi Institute of Technology & Engineering",
       location: "Tadepalligudem, AP, India",
       duration: "2022-2026 | Pursuing",
-      gpa: "8.4/10",
+      gpa: "8.48/10",
       description: "In stream of computer science and technology",
       image: educationImage
     },
@@ -28,7 +28,7 @@ const Education = () => {
       institution: "SFS EM High School",
       location: "Tanuku, AP",
       duration: "2020",
-      gpa: "86.3%",
+      gpa: "87.3%",
       description: "Completed secondary education with excellent academic performance",
       image: sfsImage
     }
